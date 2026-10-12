@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+.firecrawl/
+.DS_Store
+*.tsbuildinfo
+next-env.d.ts
+
+# Source materials (not site assets)
+PMCTC_Overview*.pdf
+photo/
