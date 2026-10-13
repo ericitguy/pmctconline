@@ -14,6 +14,7 @@ const board = [
   {
     name: "Mrs. Alberta Eku-Sika Addo",
     role: "Founder, President & Director",
+    photo: "/photos/staff/alberta-eku-sika-addo.png",
     bio: "Founder and president of Passion for Mother and Child, and CEO of Aldans Catering School and Services. She is a counselor by calling, a graduate of Glory Leadership Institute, and holds a Diploma in Catering and a certificate in NGO management from the Ghana Institute of Management and Public Administration (GIMPA). She is married with three children and two adopted daughters, and has a great passion for single mothers and children.",
   },
   {
@@ -34,17 +35,18 @@ const board = [
   {
     name: "Miss Linda Asante",
     role: "Administrator & Programmes Director",
+    photo: "/photos/staff/linda-asante.png",
     bio: "Personal assistant to the director and administrator for PMCTC. Once a single mother, she understands the challenges the ladies face and encourages them to work hard to rise against the odds.",
   },
 ];
 
 const staff = [
-  { name: "Mrs. Grace Wilson", role: "Head of Catering Department" },
-  { name: "Miss Gloria Ayulum", role: "Catering Instructor" },
-  { name: "Miss Francisca Oppong", role: "Head of Fashion Department" },
-  { name: "Mrs. Beatrice Ocansey", role: "Head of Hairdressing Department" },
-  { name: "Miss Anna Tondo", role: "Head of Cosmetology Department" },
-  { name: "Miss Victoria Effina Williams", role: "Receptionist" },
+  { name: "Mrs. Grace Wilson", role: "Head of Catering Department", photo: "/photos/staff/grace-wilson.png" },
+  { name: "Miss Gloria Ayulum", role: "Catering Instructor", photo: "/photos/staff/gloria-ayulum.png" },
+  { name: "Miss Francisca Oppong", role: "Head of Fashion Department", photo: "/photos/staff/francisca-oppong.png" },
+  { name: "Mrs. Beatrice Ocansey", role: "Head of Hairdressing Department", photo: "/photos/staff/beatrice-ocansey.png" },
+  { name: "Miss Anna Tondo", role: "Head of Cosmetology Department", photo: "/photos/staff/anna-tondo.png" },
+  { name: "Miss Victoria Effina Williams", role: "Receptionist", photo: "/photos/staff/victoria-effina-williams.png" },
 ];
 
 export default function TeamPage() {
@@ -75,18 +77,28 @@ export default function TeamPage() {
               <Reveal key={person.name} delay={i * 60}>
                 <article className="grid gap-6 border-b border-forest/10 pb-10 sm:grid-cols-[240px_1fr] lg:grid-cols-[280px_1fr]">
                   <div className="relative aspect-[4/5] overflow-hidden rounded-2xl bg-forest/5">
-                    <div className="flex h-full flex-col items-center justify-center gap-3 p-6 text-center">
-                      <span
-                        aria-hidden="true"
-                        className="flex h-16 w-16 items-center justify-center rounded-full bg-forest font-serif text-2xl text-goldsoft"
-                      >
-                        {person.name.split(" ").slice(-2)[0][0]}
-                        {person.name.split(" ").slice(-1)[0][0]}
-                      </span>
-                      <p className="text-[0.65rem] uppercase tracking-[0.2em] text-charcoal/40">
-                        Official portrait to come
-                      </p>
-                    </div>
+                    {person.photo ? (
+                      <Image
+                        src={person.photo}
+                        alt={person.name}
+                        fill
+                        sizes="(min-width: 1024px) 280px, 240px"
+                        className="object-cover"
+                      />
+                    ) : (
+                      <div className="flex h-full flex-col items-center justify-center gap-3 p-6 text-center">
+                        <span
+                          aria-hidden="true"
+                          className="flex h-16 w-16 items-center justify-center rounded-full bg-forest font-serif text-2xl text-goldsoft"
+                        >
+                          {person.name.split(" ").slice(-2)[0][0]}
+                          {person.name.split(" ").slice(-1)[0][0]}
+                        </span>
+                        <p className="text-[0.65rem] uppercase tracking-[0.2em] text-charcoal/40">
+                          Official portrait to come
+                        </p>
+                      </div>
+                    )}
                   </div>
                   <div>
                     <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gold-dark">
@@ -112,12 +124,23 @@ export default function TeamPage() {
           <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {staff.map((s, i) => (
               <Reveal key={s.name} delay={(i % 3) * 80}>
-                <li className="flex h-full flex-col justify-between rounded-2xl border border-forest/10 p-7">
-                  <div>
-                    <h3 className="font-serif text-xl font-medium text-forest">{s.name}</h3>
-                    <p className="mt-2 text-sm text-charcoal/60">{s.role}</p>
+                <li className="flex h-full flex-col justify-between overflow-hidden rounded-2xl border border-forest/10 bg-white">
+                  <div className="relative aspect-[4/5] w-full overflow-hidden bg-forest/5">
+                    <Image
+                      src={s.photo}
+                      alt={s.name}
+                      fill
+                      sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
+                      className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
+                    />
                   </div>
-                  <span aria-hidden="true" className="mt-6 h-px w-12 bg-gold" />
+                  <div className="flex flex-1 flex-col justify-between p-6">
+                    <div>
+                      <h3 className="font-serif text-xl font-medium text-forest">{s.name}</h3>
+                      <p className="mt-2 text-sm text-charcoal/60">{s.role}</p>
+                    </div>
+                    <span aria-hidden="true" className="mt-6 h-px w-12 bg-gold" />
+                  </div>
                 </li>
               </Reveal>
             ))}
