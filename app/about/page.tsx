@@ -65,7 +65,7 @@ export default function AboutPage() {
       <section className="bg-ivory">
         <Container className="grid items-start gap-14 py-24 lg:grid-cols-2 lg:gap-20">
           <Reveal>
-            <div className="relative aspect-[4/5] overflow-hidden rounded-2xl">
+            <div className="relative aspect-[1400/787] overflow-hidden rounded-2xl">
               <Image
                 src="/photos/pmctc-33.jpg"
                 alt="PMCTC trainees gathered with the Founder, Mrs. Alberta Addo"
