@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Gallery",
   description:
     "Scenes from PMCTC — training sessions, graduation ceremonies, the nursery and community moments with our mothers and children.",
+  alternates: { canonical: "/gallery" },
 };
 
 const photos: { src: string; alt: string; span?: boolean }[] = [

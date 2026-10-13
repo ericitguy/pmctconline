@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Our Team & Advisory Board",
   description:
     "Meet the leadership, staff and advisory board of Passion for Mother and Child Training Centre — founded and led by Mrs. Alberta Eku-Sika Addo.",
+  alternates: { canonical: "/team" },
 };
 
 const board = [
@@ -88,7 +89,7 @@ export default function TeamPage() {
                     </div>
                   </div>
                   <div>
-                    <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gold">
+                    <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gold-dark">
                       {person.role}
                     </p>
                     <h3 className="mt-2 font-serif text-3xl font-medium text-forest">

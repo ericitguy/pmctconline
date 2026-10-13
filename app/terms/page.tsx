@@ -4,6 +4,7 @@ import { Container, Eyebrow } from "@/components/ui";
 export const metadata: Metadata = {
   title: "Terms of Use",
   description: "Terms governing the use of the PMCTC website.",
+  alternates: { canonical: "/terms" },
 };
 
 const sections = [

@@ -4,6 +4,7 @@ import { Container, Eyebrow } from "@/components/ui";
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description: "How PMCTC handles personal information submitted through this website.",
+  alternates: { canonical: "/privacy" },
 };
 
 const sections = [

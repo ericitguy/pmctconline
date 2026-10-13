@@ -21,6 +21,7 @@ export async function generateMetadata({
   return {
     title: programme.title,
     description: programme.lead,
+    alternates: { canonical: `/programmes/${programme.slug}` },
   };
 }
 
@@ -121,11 +122,11 @@ export default async function ProgrammePage({
                 href={`/programmes/${p.slug}`}
                 className="group rounded-2xl border border-forest/10 p-8 transition-all hover:-translate-y-1 hover:border-forest/30 hover:shadow-card"
               >
-                <h3 className="font-serif text-2xl font-medium text-forest group-hover:text-terracotta">
+                <h3 className="font-serif text-2xl font-medium text-forest group-hover:text-terracotta-dark">
                   {p.title}
                 </h3>
                 <p className="mt-3 text-sm leading-relaxed text-charcoal/70">{p.short}</p>
-                <p className="mt-5 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gold">
+                <p className="mt-5 text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gold-dark">
                   Explore →
                 </p>
               </Link>

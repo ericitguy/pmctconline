@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Get Involved",
   description:
     "Volunteer as a vocational instructor, mentor, counsellor or childcare helper — or partner with PMCTC through CSR, funding and strategic support.",
+  alternates: { canonical: "/get-involved" },
 };
 
 const ways = [
@@ -51,7 +52,7 @@ export default function GetInvolvedPage() {
                     key={w}
                     className="flex items-center gap-5 rounded-xl border border-forest/10 bg-white px-6 py-4"
                   >
-                    <span className="font-serif text-xl text-gold">
+                    <span className="font-serif text-xl text-gold-dark">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <span className="font-medium text-charcoal/80">{w}</span>

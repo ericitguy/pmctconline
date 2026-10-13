@@ -4,7 +4,7 @@ export default function NotFound() {
   return (
     <section className="bg-ivory">
       <Container className="flex min-h-[80vh] flex-col items-center justify-center py-32 text-center">
-        <p className="font-serif text-7xl text-gold sm:text-8xl">404</p>
+        <p className="font-serif text-7xl text-gold-dark sm:text-8xl">404</p>
         <h1 className="mt-6 max-w-xl font-serif text-4xl font-medium leading-tight text-forest sm:text-5xl">
           This Page Has Taken a Different Path.
         </h1>

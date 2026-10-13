@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Stories",
   description:
     "Real journeys of PMCTC mothers — told with consent, dignity and hope. From learning a skill to building a future.",
+  alternates: { canonical: "/stories" },
 };
 
 export default function StoriesPage() {

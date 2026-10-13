@@ -23,6 +23,7 @@ export const metadata: Metadata = {
     default: "PMCTC — Passion for Mother and Child Training Centre | Vocational Training for Single Mothers in Ghana",
     template: "%s | PMCTC",
   },
+  alternates: { canonical: "/" },
   description:
     "Passion for Mother and Child Training Centre (PMCTC) equips single mothers in Ghana with vocational training, emotional support, childcare and faith-based guidance — so mothers and children can thrive.",
   keywords: [
@@ -40,12 +41,43 @@ export const metadata: Metadata = {
     siteName: "PMCTC — Passion for Mother and Child Training Centre",
     type: "website",
     locale: "en_GH",
-    images: [{ url: "/photos/pmctc-34.jpg", width: 1280, height: 720, alt: "PMCTC mothers and children" }],
+    images: [{ url: "/brand/pmctc-logo.png", width: 677, height: 677, alt: "P.M.C.M — Together We Bring a Transformation" }],
   },
   robots: { index: true, follow: true },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const organisationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    name: "Passion for Mother and Child Training Centre",
+    alternateName: "PMCTC",
+    url: "https://www.pmctconline.com",
+    logo: "https://www.pmctconline.com/brand/pmctc-logo.png",
+    foundingDate: "2014-02-17",
+    founder: {
+      "@type": "Person",
+      name: "Mrs. Alberta Eku-Sika Addo",
+    },
+    description:
+      "PMCTC equips single mothers in Ghana with vocational training, emotional counselling, childcare and faith-based guidance.",
+    address: {
+      "@type": "PostalAddress",
+      addressCountry: "GH",
+      streetAddress: "Klagon, behind Breaking Yoke Ministry",
+    },
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        telephone: "+233277710881",
+        contactType: "customer support",
+        email: "sika.addo@yahoo.com",
+        availableLanguage: "English",
+      },
+    ],
+    sameAs: [],
+  };
+
   return (
     <html lang="en" className={`${serif.variable} ${sans.variable}`}>
       <body className="bg-ivory font-sans text-charcoal antialiased">
@@ -58,6 +90,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <SiteHeader />
         <main id="main">{children}</main>
         <SiteFooter />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organisationJsonLd) }}
+        />
       </body>
     </html>
   );

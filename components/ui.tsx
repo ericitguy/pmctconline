@@ -7,7 +7,7 @@ export function Container({ children, className = "" }: { children: ReactNode; c
 
 export function Eyebrow({ children, tone = "gold" }: { children: ReactNode; tone?: "gold" | "forest" | "light" }) {
   const tones = {
-    gold: "text-gold",
+    gold: "text-gold-dark",
     forest: "text-forest",
     light: "text-goldsoft",
   };

@@ -66,7 +66,7 @@ export default function EnquiryForm({
         <button
           type="button"
           onClick={() => setStatus("idle")}
-          className="mt-6 text-sm font-semibold uppercase tracking-[0.14em] text-terracotta underline-offset-4 hover:underline"
+          className="mt-6 text-sm font-semibold uppercase tracking-[0.14em] text-terracotta-dark underline-offset-4 hover:underline"
         >
           Send another message
         </button>
@@ -82,13 +82,13 @@ export default function EnquiryForm({
       <div className="grid gap-5">
         <label className="block">
           <span className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-charcoal/60">
-            Your Name <span className="text-terracotta">*</span>
+            Your Name <span className="text-terracotta-dark">*</span>
           </span>
           <input name="name" type="text" required className={inputCls} placeholder="Full name" />
         </label>
         <label className="block">
           <span className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-charcoal/60">
-            Email <span className="text-terracotta">*</span>
+            Email <span className="text-terracotta-dark">*</span>
           </span>
           <input name="email" type="email" required className={inputCls} placeholder="you@example.com" />
         </label>
@@ -116,7 +116,7 @@ export default function EnquiryForm({
         </label>
         <label className="block">
           <span className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-charcoal/60">
-            Message <span className="text-terracotta">*</span>
+            Message <span className="text-terracotta-dark">*</span>
           </span>
           <textarea
             name="message"

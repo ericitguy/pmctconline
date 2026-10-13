@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     "PMCTC — Empowering Mothers. Nurturing Futures. | Passion for Mother and Child Training Centre",
   description:
     "Since 2014, PMCTC has equipped single mothers in Ghana with vocational training, emotional counselling, childcare and faith-based guidance. Every mother deserves the opportunity to build an independent future.",
+  alternates: { canonical: "/" },
 };
 
 const pillars = [
@@ -245,7 +246,7 @@ export default function HomePage() {
             {pillars.map((pillar, i) => (
               <Reveal key={pillar.number} delay={i * 90} className="bg-ivory">
                 <div className="flex h-full flex-col p-8">
-                  <span className="font-serif text-3xl text-gold">{pillar.number}</span>
+                  <span className="font-serif text-3xl text-gold-dark">{pillar.number}</span>
                   <h3 className="mt-5 font-serif text-2xl font-medium text-forest">
                     {pillar.title}
                   </h3>
@@ -330,7 +331,7 @@ export default function HomePage() {
                     aria-hidden="true"
                     className="absolute -top-[5px] left-0 h-2 w-2 rounded-full bg-gold"
                   />
-                  <p className="font-serif text-xl text-terracotta">{m.year}</p>
+                  <p className="font-serif text-xl text-terracotta-dark">{m.year}</p>
                   <h3 className="mt-2 font-serif text-xl font-medium text-forest">{m.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-charcoal/70">{m.body}</p>
                 </li>
@@ -363,7 +364,7 @@ export default function HomePage() {
                     </h3>
                     <p className="mt-1 text-sm text-charcoal/70">{person.note}</p>
                   </div>
-                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gold sm:text-right">
+                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gold-dark sm:text-right">
                     {person.role}
                   </p>
                 </li>
@@ -390,7 +391,7 @@ export default function HomePage() {
           <div className="mt-10">
             <Link
               href="/get-involved#partnership"
-              className="text-sm font-semibold uppercase tracking-[0.16em] text-terracotta underline-offset-4 hover:underline"
+              className="text-sm font-semibold uppercase tracking-[0.16em] text-terracotta-dark underline-offset-4 hover:underline"
             >
               Partner With Us to Create Lasting Change →
             </Link>

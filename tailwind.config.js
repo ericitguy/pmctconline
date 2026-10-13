@@ -14,9 +14,16 @@ module.exports = {
           soft: "#224D40",
         },
         ivory: "#F8F5EF",
-        gold: "#C4A46C",
+        gold: {
+          DEFAULT: "#C4A46C",
+          dark: "#8A6E3E",
+          soft: "#E4D3B0",
+        },
         goldsoft: "#E4D3B0",
-        terracotta: "#C77C61",
+        terracotta: {
+          DEFAULT: "#C77C61",
+          dark: "#A24E33",
+        },
         terracottasoft: "#E8B5A2",
         charcoal: "#252825",
       },

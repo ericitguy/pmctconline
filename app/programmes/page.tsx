@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Our Programmes",
   description:
     "Vocational training for single mothers in Ghana: catering, fashion and dressmaking, hairdressing, cosmetology, emotional support and childcare.",
+  alternates: { canonical: "/programmes" },
 };
 
 export default function ProgrammesPage() {

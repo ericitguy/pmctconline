@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Donate",
   description:
     "Your support can open a new door. Give towards vocational training, materials and equipment, childcare, counselling, or general programme support at PMCTC.",
+  alternates: { canonical: "/donate" },
 };
 
 const options = [

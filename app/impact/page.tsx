@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Our Impact & Success Stories",
   description:
     "From learning a skill to building a future: measurable and human stories of progress across PMCTC's catering, fashion, hairdressing and cosmetology departments.",
+  alternates: { canonical: "/impact" },
 };
 
 const departments = [
@@ -64,7 +65,7 @@ export default function ImpactPage() {
                   <h3 className="font-serif text-2xl font-medium text-forest">{d.dept}</h3>
                   <div className="mt-6 flex gap-10">
                     <div>
-                      <p className="font-serif text-5xl text-gold">{d.current}</p>
+                      <p className="font-serif text-5xl text-gold-dark">{d.current}</p>
                       <p className="mt-1 text-xs uppercase tracking-[0.18em] text-charcoal/50">
                         On role
                       </p>

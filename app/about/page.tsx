@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "About PMCTC",
   description:
     "Founded on 17 February 2014 by Mrs. Alberta Eku-Sika Addo, Passion for Mother and Child Training Centre (PMCTC) supports single mothers in Ghana through vocational training, counselling and childcare.",
+  alternates: { canonical: "/about" },
 };
 
 const pillars = [
@@ -109,7 +110,7 @@ export default function AboutPage() {
             {pillars.map((p, i) => (
               <Reveal key={p.number} delay={i * 80} className="bg-white">
                 <div className="h-full p-10">
-                  <span className="font-serif text-3xl text-gold">{p.number}</span>
+                  <span className="font-serif text-3xl text-gold-dark">{p.number}</span>
                   <h3 className="mt-4 font-serif text-2xl font-medium text-forest">{p.title}</h3>
                   <p className="mt-3 leading-relaxed text-charcoal/70">{p.body}</p>
                 </div>

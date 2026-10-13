@@ -41,7 +41,7 @@ export default function SiteFooter() {
         <div className="grid gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <Link href="/" className="flex items-center gap-3" aria-label="PMCTC home">
-              <Logo className="h-11 w-11 text-goldsoft" />
+              <Logo className="h-11 w-11" />
               <span className="flex flex-col leading-none">
                 <span className="font-serif text-2xl font-semibold tracking-[0.08em]">PMCTC</span>
                 <span className="mt-1 text-[0.6rem] uppercase tracking-[0.2em] text-ivory/60">

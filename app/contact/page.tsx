@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Contact",
   description:
     "Contact PMCTC — Klagon, behind Breaking Yoke Ministry, Ghana. Call 027 771 0881 or email sika.addo@yahoo.com.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {
@@ -33,39 +34,39 @@ export default function ContactPage() {
               <SectionHeading eyebrow="Reach Us" title="We're Nearby and Ready to Listen." />
               <ul className="mt-10 space-y-6">
                 <li>
-                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gold">
+                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gold-dark">
                     Telephone
                   </p>
                   <p className="mt-2 text-lg">
-                    <a href="tel:0277710881" className="text-forest hover:text-terracotta">
+                    <a href="tel:0277710881" className="text-forest hover:text-terracotta-dark">
                       027 771 0881
                     </a>
                     {" · "}
-                    <a href="tel:0264710881" className="text-forest hover:text-terracotta">
+                    <a href="tel:0264710881" className="text-forest hover:text-terracotta-dark">
                       026 471 0881
                     </a>
                     {" · "}
-                    <a href="tel:0244847850" className="text-forest hover:text-terracotta">
+                    <a href="tel:0244847850" className="text-forest hover:text-terracotta-dark">
                       024 484 7850
                     </a>
                   </p>
                 </li>
                 <li>
-                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gold">
+                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gold-dark">
                     Email
                   </p>
                   <p className="mt-2 text-lg">
-                    <a href="mailto:sika.addo@yahoo.com" className="text-forest hover:text-terracotta">
+                    <a href="mailto:sika.addo@yahoo.com" className="text-forest hover:text-terracotta-dark">
                       sika.addo@yahoo.com
                     </a>
                     {" · "}
-                    <a href="mailto:asabea8394@gmail.com" className="text-forest hover:text-terracotta">
+                    <a href="mailto:asabea8394@gmail.com" className="text-forest hover:text-terracotta-dark">
                       asabea8394@gmail.com
                     </a>
                   </p>
                 </li>
                 <li>
-                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gold">
+                  <p className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-gold-dark">
                     Location
                   </p>
                   <p className="mt-2 text-lg text-charcoal/80">
