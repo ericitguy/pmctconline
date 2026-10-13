@@ -8,7 +8,7 @@ Live: **https://www.pmctconline.com** · Production source: this repository.
 
 - **Next.js 16** (App Router, static prerendering — no server needed beyond forms)
 - **React 19**, **TypeScript**, **Tailwind CSS 3**
-- Server Actions for enquiry forms (volunteer / partnership / contact)
+- Server Actions for enquiry forms (volunteer / partnership / contact) with spam protection (honeypot + time-trap + rate limiting + content filters) and staff email delivery via Resend
 - Next Image optimization (AVIF/WebP) over 66 curated photographs in `public/photos/`
 
 ## Getting started
@@ -47,14 +47,21 @@ All organisation facts (founding date, vision, mission, departments, staff, part
 ## Deploying to Vercel
 
 1. Import the GitHub repository (`ericitguy/pmctconline`) at [vercel.com/new](https://vercel.com/new).
-2. Framework preset: **Next.js** (auto-detected). No environment variables required.
-3. Deploy — every route is prerendered; forms work out of the box.
+2. Framework preset: **Next.js** (auto-detected).
+3. Add environment variables (Settings → Environment Variables) — see `.env.local.example`:
+   - `RESEND_API_KEY` — create an API key at [resend.com/api-keys](https://resend.com/api-keys); this activates email delivery to the staff inboxes.
+   - `ENQUIRY_EMAIL_TO` — staff recipient inboxes, comma-separated (defaults to `sika.addo@yahoo.com,asabea8394@gmail.com`).
+   - `ENQUIRY_EMAIL_FROM` — see the domain note below.
+4. Deploy — every route is prerendered; forms work out of the box.
+
+### Enquiry delivery & domain verification
+
+Before `pmctconline.com` DNS is verified with Resend, keep `ENQUIRY_EMAIL_FROM` as `PMCTC Website <onboarding@resend.dev>`. Resend restricts the unverified test sender to the account owner's own inbox — staff delivery to other addresses requires verifying the domain (SPF + DKIM records added to the domain's DNS, which whoever manages `pmctconline.com` DNS must do).
 
 ## Before launch (configurations pending)
 
 - [ ] Verified payment provider (Paystack/Hubtel) → enable online giving on `/donate`
-- [ ] Enquiry routing to staff inbox/SMS (currently logged server-side in `app/actions.ts`)
-- [ ] Spam protection (rate limiting / CAPTCHA) on forms
+- [ ] Resend account: verify `pmctconline.com` DNS (SPF/DKIM), set `RESEND_API_KEY` + `ENQUIRY_EMAIL_FROM=enquiries@pmctconline.com` on Vercel → staff email delivery fully live
 - [ ] Verified map embed + full street address on `/contact`
 - [ ] Consent-approved participant stories on `/stories`
 - [ ] Legal pages reviewed by PMCTC under Ghana's Data Protection Act, 2012 (Act 843)

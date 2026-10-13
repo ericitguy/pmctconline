@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { submitEnquiry } from "@/app/actions";
 
 const topics = [
@@ -20,6 +20,12 @@ export default function EnquiryForm({
 }) {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
   const [error, setError] = useState("");
+  // Anti-spam: the token records when the form was hydrated; the server
+  // rejects submissions echoed back faster than a human could type.
+  const startedRef = useRef("");
+  useEffect(() => {
+    if (!startedRef.current) startedRef.current = String(Date.now());
+  }, []);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -45,6 +51,8 @@ export default function EnquiryForm({
         topic: String(fd.get("topic") || ""),
         message,
         kind,
+        company: String(fd.get("company") || ""),
+        started: startedRef.current,
       });
       if (!res.ok) throw new Error(res.error || "Something went wrong.");
       setStatus("sent");
@@ -91,6 +99,18 @@ export default function EnquiryForm({
             Email <span className="text-terracotta-dark">*</span>
           </span>
           <input name="email" type="email" required className={inputCls} placeholder="you@example.com" />
+        </label>
+        <label className="hidden" aria-hidden="true">
+          <span>Company</span>
+          {/* Honeypot: Bots autofill every field; humans never see it. */}
+          <input
+            name="company"
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+            defaultValue=""
+            className="opacity-0"
+          />
         </label>
         <label className="block">
           <span className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-charcoal/60">
@@ -153,10 +173,6 @@ export default function EnquiryForm({
             privacy policy
           </a>
           .
-        </p>
-        <p className="text-xs italic text-charcoal/40">
-          Delivery Inbox placeholder: form submissions are logged to the
-          server; email/SMS delivery routing is configured before launch.
         </p>
       </div>
     </form>

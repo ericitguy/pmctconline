@@ -264,6 +264,59 @@ export default function HomePage() {
         </Container>
       </section>
 
+      {/* ============ CAMPUS ============ */}
+      <section className="relative overflow-hidden bg-forest text-ivory">
+        <Container className="py-24 lg:py-32">
+          <div className="grid items-center gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
+            <Reveal>
+              <div className="relative">
+                <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-lift">
+                  <Image
+                    src="/photos/pmctc-campus.jpg"
+                    alt="The PMCTC campus buildings and flower-lined pathway, Klagon, Ghana"
+                    fill
+                    sizes="(min-width: 1024px) 48vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <span
+                  aria-hidden="true"
+                  className="absolute -right-6 -top-6 hidden h-28 w-28 rounded-full border border-gold/50 sm:block lg:-right-10"
+                />
+                <div className="absolute -bottom-8 left-6 rounded-xl border border-ivory/15 bg-ivory/10 p-5 backdrop-blur-sm sm:p-6">
+                  <p className="font-serif text-xl text-goldsoft sm:text-2xl">Klagon, Ghana</p>
+                  <p className="mt-1 text-sm text-ivory/70">
+                    The centre's scent garden and gatehouse — home to every programme.
+                  </p>
+                </div>
+              </div>
+            </Reveal>
+            <Reveal delay={120}>
+              <SectionHeading
+                tone="light"
+                eyebrow="Our Campus"
+                title="A Place Built for New Beginnings."
+                intro="Behind the purple facade and the lined flower pathway sits a full training campus: bright classrooms, a working catering kitchen, the salon and the nursery courtyard — all within one safe, green compound in Klagon."
+              />
+              <p className="mt-5 leading-relaxed text-ivory/70">
+                Every element — from the programming alphabet on the classroom
+                wall to the calm courtyard where children play — is designed so
+                mothers can learn while their little ones are cared for a few
+                steps away.
+              </p>
+              <div className="mt-9 flex flex-wrap gap-4">
+                <ButtonLink href="/gallery" variant="light">
+                  Tour the Gallery
+                </ButtonLink>
+                <ButtonLink href="/contact" variant="outline" className="border-ivory/50 text-ivory hover:border-ivory hover:bg-ivory hover:text-forest">
+                  Plan a Visit
+                </ButtonLink>
+              </div>
+            </Reveal>
+          </div>
+        </Container>
+      </section>
+
       {/* ============ STORIES ============ */}
       <section className="bg-white">
         <Container className="grid items-center gap-14 py-24 lg:grid-cols-2 lg:gap-20 lg:py-32">

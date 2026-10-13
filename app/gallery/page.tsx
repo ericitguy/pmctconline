@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-import { Container, Eyebrow, Reveal } from "@/components/ui";
+import { Container, Eyebrow } from "@/components/ui";
+import GalleryGrid from "@/components/GalleryGrid";
 import FooterCTA from "@/components/FooterCTA";
 
 export const metadata: Metadata = {
@@ -100,28 +101,7 @@ export default function GalleryPage() {
 
       <section className="bg-ivory">
         <Container className="py-20">
-          <div className="columns-1 gap-5 sm:columns-2 lg:columns-3">
-            {photos.map((p, i) => (
-              <Reveal key={p.src} delay={(i % 3) * 60} className="mb-5 break-inside-avoid">
-                <figure
-                  className={`group relative overflow-hidden rounded-2xl bg-forest/5 ${
-                    p.span ? "aspect-[4/3]" : "aspect-[4/5]"
-                  }`}
-                >
-                  <Image
-                    src={p.src}
-                    alt={p.alt}
-                    fill
-                    sizes="(min-width: 1024px) 30vw, (min-width: 640px) 45vw, 90vw"
-                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.03]"
-                  />
-                  <figcaption className="absolute inset-x-0 bottom-0 translate-y-3 bg-gradient-to-t from-forest-deep/85 to-transparent p-5 text-[0.8rem] text-ivory opacity-0 transition-all duration-500 group-hover:translate-y-0 group-hover:opacity-100">
-                    {p.alt}
-                  </figcaption>
-                </figure>
-              </Reveal>
-            ))}
-          </div>
+          <GalleryGrid photos={photos} />
         </Container>
       </section>
 
