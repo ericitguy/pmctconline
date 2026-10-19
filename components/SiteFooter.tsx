@@ -135,6 +135,17 @@ export default function SiteFooter() {
             All rights reserved.
           </p>
           <p>Website placeholder photography pending approval — see our content notice.</p>
+          <p>
+            Designed by{" "}
+            <a
+              href="https://aitsapp.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-ivory/75 underline underline-offset-2 transition-colors hover:text-white"
+            >
+              Appiah Information Technology Systems
+            </a>
+          </p>
         </div>
       </div>
     </footer>
