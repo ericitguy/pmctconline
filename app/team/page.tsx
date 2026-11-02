@@ -20,16 +20,19 @@ const board = [
   {
     name: "Mr. Daniel W. Addo",
     role: "Board Chairman",
+    photo: "/photos/staff/daniel-w-addo.jpg",
     bio: "A banker by profession and businessman as well. A very compassionate and kind man who will stop at nothing to be of help to women and children.",
   },
   {
     name: "Mrs. Barbara B. Spins",
     role: "Adviser — Social Care",
+    photo: "/photos/staff/barbara-b-spins.jpg",
     bio: "A social care practitioner with over 15 years' practice in the UK. In Ghana, she is a regular resource person on family matters on Starr FM. She also works with the street kids' empowerment foundation (SCEF) as a volunteer and consultant, supporting parents and guardians of children rescued from the street. She has a passion for the youth and single mothers and believes that they can rise above what society thinks.",
   },
   {
     name: "Dr. Kojo Cobba Essel",
     role: "Adviser — Health",
+    photo: "/photos/staff/kojo-cobba-essel.jpg",
     bio: "A medical doctor who holds an MBA and is ISSA certified in exercise therapy and nutrition. He is married with two children and takes care of the medical needs of our ladies.",
   },
   {

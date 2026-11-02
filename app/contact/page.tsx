@@ -6,7 +6,7 @@ import EnquiryForm from "@/components/EnquiryForm";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Contact PMCTC — Klagon, behind Breaking Yoke Ministry, Ghana. Call 027 771 0881 or email sika.addo@yahoo.com.",
+    "Contact PMCTC — Klagon, behind Breaking Yoke Ministry, Ghana. Find us on the map, call 027 771 0881 or email sika.addo@yahoo.com.",
   alternates: { canonical: "/contact" },
 };
 
@@ -72,17 +72,40 @@ export default function ContactPage() {
                   <p className="mt-2 text-lg text-charcoal/80">
                     Klagon, behind Breaking Yoke Ministry, Ghana
                   </p>
-                  <p className="mt-1 text-sm italic text-charcoal/50">
-                    Full street address and directions to be added from verified
-                    maps data.
+                  <p className="mt-2 text-lg">
+                    <a
+                      href="https://maps.app.goo.gl/kPgDwpxYNieu4pMf7"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-forest underline decoration-forest/30 underline-offset-4 hover:text-terracotta-dark"
+                    >
+                      Open in Google Maps ↗
+                    </a>
                   </p>
                 </li>
               </ul>
-              <div
-                aria-hidden="true"
-                className="mt-10 flex h-56 items-center justify-center rounded-2xl border border-forest/10 bg-forest/5 text-sm text-charcoal/50"
-              >
-                Map placeholder — embed a verified map when address is final.
+              <div className="mt-10 overflow-hidden rounded-2xl border border-forest/10 bg-forest/5">
+                <iframe
+                  title="Map showing PMCTC's location in Klagon, Ghana"
+                  src="https://maps.google.com/maps?q=5.6585178,-0.0447543&z=16&hl=en&output=embed"
+                  className="h-72 w-full border-0"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                />
+                <div className="flex flex-wrap items-center justify-between gap-3 px-5 py-4">
+                  <p className="text-sm text-charcoal/60">
+                    Klagon · 5.65852, −0.04475
+                  </p>
+                  <a
+                    href="https://maps.app.goo.gl/kPgDwpxYNieu4pMf7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-terracotta-dark underline-offset-4 hover:underline"
+                  >
+                    Get Directions
+                  </a>
+                </div>
               </div>
             </Reveal>
             <Reveal delay={120}>

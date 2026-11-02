@@ -1,6 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-import { Container, Eyebrow } from "@/components/ui";
+import { Container, Eyebrow, SectionHeading } from "@/components/ui";
 import GalleryGrid from "@/components/GalleryGrid";
 import FooterCTA from "@/components/FooterCTA";
 
@@ -78,6 +78,30 @@ const photos: { src: string; alt: string; span?: boolean }[] = [
   { src: "/photos/pmctc-66.jpg", alt: "A mother holds her child close" },
 ];
 
+const awards: { src: string; alt: string; span?: boolean }[] = [
+  {
+    src: "/photos/awards/awards-presentation.jpg",
+    alt: "Mrs. Alberta Eku-Sika Addo receiving the 100 Africa Most Influential Persons Award",
+    span: true,
+  },
+  {
+    src: "/photos/awards/awards-trophy.jpg",
+    alt: "The 100 Africa Most Influential Persons Award trophy presented to Mrs. Alberta Eku-Sika Addo",
+  },
+  {
+    src: "/photos/awards/awards-100-africa-cover.jpg",
+    alt: "100 Africa Most Influential Persons Award publication featuring Mrs. Alberta Eku-Sika Addo",
+  },
+  {
+    src: "/photos/awards/awards-sash.jpg",
+    alt: "Mrs. Alberta Eku-Sika Addo being honoured on stage at the awards ceremony",
+  },
+  {
+    src: "/photos/awards/awards-reception.jpg",
+    alt: "Guests at the 100 Africa Most Influential Persons Award ceremony",
+  },
+];
+
 export default function GalleryPage() {
   return (
     <>
@@ -99,9 +123,25 @@ export default function GalleryPage() {
         </Container>
       </section>
 
+      <section className="bg-white">
+        <Container className="py-20 lg:py-24">
+          <SectionHeading
+            eyebrow="Awards & Recognition"
+            title="Honoured Among Africa's Most Influential."
+            intro="Our Founder and Director, Mrs. Alberta Eku-Sika Addo, was recognised at the 100 Africa Most Influential Persons Award for her work with single mothers and children through PMCTC."
+          />
+          <div className="mt-12">
+            <GalleryGrid photos={awards} />
+          </div>
+        </Container>
+      </section>
+
       <section className="bg-ivory">
         <Container className="py-20">
-          <GalleryGrid photos={photos} />
+          <SectionHeading eyebrow="Life at the Centre" title="Everyday Moments." />
+          <div className="mt-12">
+            <GalleryGrid photos={photos} />
+          </div>
         </Container>
       </section>
 
