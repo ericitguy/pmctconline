@@ -32,7 +32,7 @@ Node.js 20+ recommended (tested on Node 20).
 | `/impact` | Verified department records, consent-first storytelling |
 | `/stories` | Story framework pending consented participant stories |
 | `/team` | Advisory board + staff |
-| `/gallery` | 66-photo masonry gallery |
+| `/gallery` | 66-photo masonry gallery + awards & recognition section |
 | `/donate` | Giving options — online payment disabled until provider is configured |
 | `/get-involved` | Volunteer & partnership forms |
 | `/contact` | Contact details + enquiry form |
@@ -62,6 +62,6 @@ Before `pmctconline.com` DNS is verified with Resend, keep `ENQUIRY_EMAIL_FROM` 
 
 - [ ] Verified payment provider (Paystack/Hubtel) → enable online giving on `/donate`
 - [ ] Resend account: verify `pmctconline.com` DNS (SPF/DKIM), set `RESEND_API_KEY` + `ENQUIRY_EMAIL_FROM=enquiries@pmctconline.com` on Vercel → staff email delivery fully live
-- [ ] Verified map embed + full street address on `/contact`
+- [x] Verified map embed on `/contact` (pin 5.6585178, -0.0447543); building/street number still to be confirmed with PMCTC
 - [ ] Consent-approved participant stories on `/stories`
 - [ ] Legal pages reviewed by PMCTC under Ghana's Data Protection Act, 2012 (Act 843)

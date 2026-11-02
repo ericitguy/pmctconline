@@ -427,6 +427,47 @@ export default function HomePage() {
         </Container>
       </section>
 
+      {/* ============ RECOGNITION ============ */}
+      <section className="bg-forest text-ivory">
+        <Container className="py-24 lg:py-32">
+          <div className="grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
+            <Reveal>
+              <div className="relative">
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl">
+                  <Image
+                    src="/photos/awards/awards-presentation.jpg"
+                    alt="Mrs. Alberta Eku-Sika Addo receiving the 100 Africa Most Influential Persons Award"
+                    fill
+                    sizes="(min-width: 1024px) 42vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <span
+                  aria-hidden="true"
+                  className="absolute -left-6 -top-6 hidden h-24 w-24 rounded-full border border-gold/50 sm:block"
+                />
+              </div>
+            </Reveal>
+            <Reveal delay={120}>
+              <Eyebrow tone="light">Awards &amp; Recognition</Eyebrow>
+              <h2 className="mt-5 max-w-2xl font-serif text-4xl font-medium leading-[1.08] text-ivory sm:text-5xl">
+                Honoured Among Africa's Most Influential.
+              </h2>
+              <p className="mt-6 max-w-xl text-lg leading-relaxed text-ivory/80">
+                Our Founder and Director, Mrs. Alberta Eku-Sika Addo, was
+                recognised at the 100 Africa Most Influential Persons Award for
+                the work PMCTC does alongside single mothers and their children.
+              </p>
+              <div className="mt-9">
+                <ButtonLink href="/gallery" variant="light">
+                  See the Awards
+                </ButtonLink>
+              </div>
+            </Reveal>
+          </div>
+        </Container>
+      </section>
+
       {/* ============ PARTNERS ============ */}
       <section className="border-y border-forest/10 bg-ivory">
         <Container className="py-20 text-center">

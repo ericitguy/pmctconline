@@ -64,8 +64,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     address: {
       "@type": "PostalAddress",
       addressCountry: "GH",
+      addressLocality: "Klagon",
+      addressRegion: "Greater Accra Region",
       streetAddress: "Klagon, behind Breaking Yoke Ministry",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 5.6585178,
+      longitude: -0.0447543,
+    },
+    hasMap: "https://maps.app.goo.gl/kPgDwpxYNieu4pMf7",
     contactPoint: [
       {
         "@type": "ContactPoint",
