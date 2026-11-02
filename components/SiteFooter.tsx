@@ -134,7 +134,6 @@ export default function SiteFooter() {
             © {new Date().getFullYear()} Passion for Mother and Child Training Centre (PMCTC).
             All rights reserved.
           </p>
-          <p>Website placeholder photography pending approval — see our content notice.</p>
           <p>
             Designed by{" "}
             <a
