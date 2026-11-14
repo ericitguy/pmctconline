@@ -68,31 +68,102 @@ export default function DonatePage() {
             ))}
           </div>
 
-          <Reveal delay={100}>
-            <div className="mx-auto mt-16 max-w-3xl rounded-2xl border border-gold/40 bg-goldsoft/20 p-8 text-center sm:p-10">
-              <h3 className="font-serif text-3xl font-medium text-forest">
-                Online Giving — Coming Soon
-              </h3>
-              <p className="mt-4 leading-relaxed text-charcoal/70">
-                We are completing the setup of a secure payment provider for
-                mobile money and card donations. Until then, please contact us
-                directly and our team will arrange your gift and an official
-                receipt.
-              </p>
-              <div className="mt-8 flex flex-wrap justify-center gap-4">
-                <ButtonLink href="tel:0277710881" variant="primary">
-                  Call 027 771 0881
-                </ButtonLink>
-                <ButtonLink href="mailto:sika.addo@yahoo.com?subject=Donation%20to%20PMCTC" variant="outline">
-                  Email About Giving
-                </ButtonLink>
-              </div>
-              <p className="mt-6 text-xs text-charcoal/50">
-                No payment is taken on this page. Online donation processing
-                activates only once a verified payment provider is configured.
-              </p>
+          <div className="mt-20">
+            <SectionHeading
+              align="center"
+              eyebrow="How to Give"
+              title="Mobile Money & Bank Transfer."
+              intro="Send your gift directly to PMCTC using either option below, then let us know so we can confirm it and issue an official receipt."
+            />
+
+            <div className="mt-12 grid gap-6 sm:grid-cols-2">
+              <Reveal>
+                <article className="h-full rounded-2xl border border-gold/40 bg-goldsoft/20 p-8">
+                  <Eyebrow>Mobile Money</Eyebrow>
+                  <h3 className="mt-4 font-serif text-2xl font-medium text-forest">
+                    MTN Mobile Money
+                  </h3>
+                  <dl className="mt-6 space-y-4 text-sm">
+                    <div>
+                      <dt className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-charcoal/50">
+                        Number
+                      </dt>
+                      <dd className="mt-1 text-lg text-forest">
+                        <a href="tel:0596314019" className="hover:text-terracotta-dark">
+                          059 631 4019
+                        </a>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-charcoal/50">
+                        Account Name
+                      </dt>
+                      <dd className="mt-1 font-semibold uppercase tracking-wide text-charcoal/80">
+                        Passion for Mother and Child
+                      </dd>
+                    </div>
+                  </dl>
+                </article>
+              </Reveal>
+
+              <Reveal delay={80}>
+                <article className="h-full rounded-2xl border border-forest/10 bg-white p-8">
+                  <Eyebrow>Bank Transfer</Eyebrow>
+                  <h3 className="mt-4 font-serif text-2xl font-medium text-forest">
+                    First Atlantic Bank
+                  </h3>
+                  <dl className="mt-6 space-y-4 text-sm">
+                    <div>
+                      <dt className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-charcoal/50">
+                        Account Number
+                      </dt>
+                      <dd className="mt-1 text-lg tracking-wide text-forest">
+                        0142011101018
+                      </dd>
+                    </div>
+                    <div>
+                      <dt className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-charcoal/50">
+                        Account Name
+                      </dt>
+                      <dd className="mt-1 font-semibold uppercase tracking-wide text-charcoal/80">
+                        Passion for Mother and Child
+                      </dd>
+                    </div>
+                    <div>
+                      <dt className="text-[0.65rem] font-semibold uppercase tracking-[0.18em] text-charcoal/50">
+                        Branch
+                      </dt>
+                      <dd className="mt-1 text-charcoal/80">Spintex Branch</dd>
+                    </div>
+                  </dl>
+                </article>
+              </Reveal>
             </div>
-          </Reveal>
+
+            <Reveal delay={140}>
+              <div className="mx-auto mt-10 max-w-3xl rounded-2xl border border-forest/10 bg-white p-8 text-center">
+                <p className="leading-relaxed text-charcoal/70">
+                  After giving, email us the amount and the reference so our team
+                  can confirm your gift and send an official receipt.
+                </p>
+                <div className="mt-7 flex flex-wrap justify-center gap-4">
+                  <ButtonLink
+                    href="mailto:sika.addo@yahoo.com?subject=Donation%20to%20PMCTC"
+                    variant="primary"
+                  >
+                    Email About Giving
+                  </ButtonLink>
+                  <ButtonLink href="tel:0277710881" variant="outline">
+                    Call 027 771 0881
+                  </ButtonLink>
+                </div>
+                <p className="mt-6 text-xs text-charcoal/50">
+                  No payment is taken on this page. These details are for direct
+                  transfers arranged with PMCTC.
+                </p>
+              </div>
+            </Reveal>
+          </div>
         </Container>
       </section>
 
